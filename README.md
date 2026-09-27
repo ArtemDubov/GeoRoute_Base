@@ -2,6 +2,10 @@ RouteOptima — построение оптимальных маршрутов �
 
 Веб-приложение на Streamlit для построения оптимального маршрута курьера по нескольким адресам. Загружает дорожный граф OpenStreetMap, считает кратчайшие пути алгоритмом Дейкстры и решает задачу коммивояжёра (TSP).
 
+Демо
+
+Работающее приложение: https://georoute-optima.streamlit.app
+
 Возможности
 
 - Поиск адресов через Nominatim (OpenStreetMap).
@@ -25,7 +29,8 @@ RouteOptima — построение оптимальных маршрутов �
 Требования
 
 - Python 3.10+
-- Зависимости из requirements.txt: streamlit, streamlit-folium, folium, geopy, osmnx, networkx, scipy, numpy, pyproj, scikit-learn.
+- Зависимости из requirements.txt: streamlit, streamlit-folium, folium, geopy, osmnx, networkx, scipy, numpy, pyproj, scikit-learn, geopandas
+- Системные пакеты (packages.txt): libgdal-dev, libproj-dev, build-essential
 
 Установка и запуск
 
@@ -82,18 +87,14 @@ RouteOptima — построение оптимальных маршрутов �
 - Полный перебор TSP работает до 7 точек включительно, дальше включается жадный алгоритм.
 - Пропускные способности дорог и пробки не учитываются.
 
-Зависимости проекта (requirements.txt)
+Стек
 
-    streamlit
-    streamlit-folium
-    folium
-    geopy
-    osmnx
-    networkx
-    scipy
-    numpy
-    pyproj
-    scikit-learn
+- Streamlit, streamlit-folium, folium — интерфейс и карта.
+- OSMnx, NetworkX — загрузка и работа с дорожным графом.
+- SciPy (scipy.sparse, scipy.sparse.csgraph) — разреженные матрицы и алгоритм Дейкстры.
+- GeoPy — геокодирование через Nominatim.
+- PyProj — проекции координат.
+- Pandas, NumPy — обработка данных.
 
 Лицензия
 
