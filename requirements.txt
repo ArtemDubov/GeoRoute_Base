@@ -6,3 +6,6 @@ osmnx
 scipy
 networkx
 scikit-learn
+numpy
+pyproj
+geopandas
